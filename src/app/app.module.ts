@@ -13,6 +13,12 @@ import { ProdFormsComponent } from './pages/product/prod-forms/prod-forms.compon
 import { ProdDetailComponent } from './pages/product/prod-detail/prod-detail.component';
 import { ProdTableComponent } from './pages/product/prod-table/prod-table.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// angular material imports
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 @NgModule({
   declarations: [
@@ -30,7 +36,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,14 +1,23 @@
 <table>
     <tr>
         <td>
-            <label for="username">Username: </label>
-            <input id="username"><br />
+            <mat-form-field appearance="outline">
+                <mat-label>Input</mat-label>
+                <input matInput #input maxlength="10" placeholder="Ex. Nougat">
+              </mat-form-field>
         </td>
     </tr>
     <tr>
         <td>
-            <label for="password">Password: </label>
-            <input id="password"><br/>
+            <div class="example-container">
+                <mat-form-field appearance="fill">
+                    <mat-label>Enter your password</mat-label>
+                    <input matInput [type]="hide ? 'password' : 'text'">
+                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                </mat-form-field>
+              </div>
         </td>
     </tr>
     <tr>
